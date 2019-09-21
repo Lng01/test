@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>记事本</title>
+</head>
+<body>
+<div class="container">
+    <h1 class="h3 text-center mb-2">记事本</h1>
+    <ul class="list-group mb-3">
+        <!-- 模板标签 -->
+        {% for note in notes_list %}
+        <li class="list-group-item">
+            <div class="d-flex align-items-center">
+                {{ note.name }}
+                <div class="ml-auto">
+                    <button class="btn btn-primary">详情</button>
+                    <button class="btn btn-danger">删除</button>
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    <button class="btn btn-primary btn-block">添加</button>
+</div>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      crossorigin="anonymous">
+</body>
+</html>
